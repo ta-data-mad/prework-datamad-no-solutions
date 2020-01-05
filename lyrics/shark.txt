@@ -1,0 +1,71 @@
+EJERCICIO 2
+
+b='Baby ' 
+s='shark'
+d='doo doo doo doo doo doo'
+i='\n'
+e='!'
+m='Mommy '
+p='Daddy '
+gm='Grandma '
+gp='Grandpa '
+l='Let\'s go hunt'
+c=', '
+
+print((b+s+c+d+i)*3,end='')
+print(b+s+e+i,end='')
+print((m+s+c+d+i)*3,end='')
+print(m+s+e+i,end='')
+print((p+s+c+d+i)*3,end='')
+print(p+s+e+i,end='')
+print((gm+s+c+d+i)*3,end='')
+print(gm+s+e+i,end='')
+print((gp+s+c+d+i)*3,end='')
+print(gp+s+e+i,end='')
+print((l+c+d+i)*3,end='')
+print(l+e+i,end='')
+print('Run away,…')
+
+
+
+EJERCICIO 3
+lista=[]
+b='Baby ' 
+s='shark'
+d='doo doo doo doo doo doo'
+e='!'
+m='Mommy '
+p='Daddy '
+gm='Grandma '
+gp='Grandpa '
+l='Let\'s go hunt'
+c=', '
+
+lista.append(b+s+c+d)
+lista.append(b+s+c+d)
+lista.append(b+s+c+d)
+lista.append(b+s+e)
+lista.append(m+s+c+d)
+lista.append(m+s+c+d)
+lista.append(m+s+c+d)
+lista.append(m+s+e)
+lista.append(p+s+c+d)
+lista.append(p+s+c+d)
+lista.append(p+s+c+d)
+lista.append(p+s+e)
+lista.append(gm+s+c+d)
+lista.append(gm+s+c+d)
+lista.append(gm+s+c+d)
+lista.append(gm+s+e)
+lista.append(gp+s+c+d)
+lista.append(gp+s+c+d)
+lista.append(gp+s+c+d)
+lista.append(gp+s+e)
+lista.append(l+c+d)
+lista.append(l+c+d)
+lista.append(l+c+d)
+lista.append(l+e)
+lista.append('Run away,…')
+
+result='\n'.join(lista)
+print(result)
