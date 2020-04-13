@@ -8,10 +8,45 @@ Created on Sun Apr 12 20:28:41 2020
 "Init working directory as a git directory"
 
 
+"Snail and well"
+well = 125
+cmPerDay = 30
+cmPerNight = -20
+snailHasNotEscaped = True
+days = 0
+totalCMs = 0
+
+cmPerWholeDay = cmPerDay + cmPerNight
+
+while snailHasNotEscaped:
+   totalCMs += cmPerWholeDay
+   days += 1
+   print(days)
+   if totalCMs >= well:
+      snailHasNotEscaped = False
+
+print("Snail escaped in", days, "days")
 
 
-# import os
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"Not sure what"
+import os
 with open("example.txt", "w") as f:
     f.write("Hello world \n")
     f.write("How are you? \n")
