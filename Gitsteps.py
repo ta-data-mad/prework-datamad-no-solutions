@@ -13,6 +13,7 @@ os.chdir(path)
 !git add .
 !git add gitsteps.py
 !git add bus.py
+!git add robin-hood.py
 # Commit all files 
 !git commit -am "Bus 100% done!"
 
@@ -24,8 +25,11 @@ os.chdir(path)
 # pull existing repository to merge with files you want to push
 # !git remote add origin https://github.com/bfmilan/prework-datamad-no-solutions.git
 
+# git remote -v
+
 # Add the file to local git
 # !git add temp.py
+import pandas
 # Push the file to github.com
 # !git push -u origin master
 
@@ -39,3 +43,9 @@ os.chdir(path)
 # git commit -m "remove file1.txt"
 
 # And to push changes to remote repo
+
+~
+# https://stackoverflow.com/a/54227155
+mysql -u root -p
+mysql -u root
+exit; 
