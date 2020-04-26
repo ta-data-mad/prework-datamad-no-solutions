@@ -1,74 +1,49 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Sun Apr 12 20:28:41 2020
 
-@author: Blanca
-"""
-"Init working directory as a git directory"
+well_height = 125
+daily_advance = 30
+night_retreat = -20
+accumulated_distance = daily_advance + night_retreat
+totalcms = 0
+days=0
 
+snailhasnotescaped = True
+while snailhasnotescaped:
+    totalcms += daily_advance
+    if totalcms >= well_height:
+        snailhasnotescaped = False
+        break
 
-"Snail and well"
-well = 125
-cmPerDay = 30
-cmPerNight = -20
-snailHasNotEscaped = True
+    days += 1
+
+    totalcms += night_retreat
+    if totalcms >= well_height:
+        snailhasnotescaped = False
+        break
+
+print(days)
+
+#######
+well_height = 125
+daily_advance = 30
+night_retreat = -20
+accumulated_distance = daily_advance + night_retreat
+totalcms = 0
+total = 0
 days = 0
-totalCMs = 0
+snailhasnotescaped = True
 
-cmPerWholeDay = cmPerDay + cmPerNight
+while snailhasnotescaped:
+    totalcms += accumulated_distance
+    days += 1
+    if totalcms >= well_height:
+        snailhasnotescaped = False
+        break
+#########
+print("Days = ", days, "days")
 
-while snailHasNotEscaped:
-   totalCMs += cmPerWholeDay
-   days += 1
-   print(days)
-   if totalCMs >= well:
-      snailHasNotEscaped = False
-
-print("Snail escaped in", days, "days")
-
-
+and 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-"Not sure what"
-import os
-with open("example.txt", "w") as f:
-    f.write("Hello world \n")
-    f.write("How are you? \n")
-    f.write("Im fine.")
-    
-
-with open("example.txt", "r") as f:
-    lines = f.readlines()
-    for line in lines:
-        print(line)
-
-data = []
-
-with open("/Users/Blanca/ironhack/weight_height.csv", "r") as f: 
-    lines = f.readlines()
-    for line in lines: 
-        data.append(line.split()[0].split(","))
-        
-heights = []
-
-for person in data[1:]:
-    height = int(person[2])
-    heights.append(height)
-avg_height = sum(heights)/ len(heights)
-print(avg_height)    
