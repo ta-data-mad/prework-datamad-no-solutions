@@ -1,3 +1,5 @@
+# Update (27-04.2020): "Included statistics.ipynb with the different sections of the assingment. Still some things missing. Python exercises: mission impossible, lyrics and r-p-s still missing"
+
 # Projects for prework IH Data Analytics
 
 Within this project there are several folders that have coding problems to solve in Python that will help you to familiarize yourself with the language and its most common functions. Each folder contains a file to open with **jupyter notebook** that will guide you step by step so that you reach the solution.
