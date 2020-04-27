@@ -1,4 +1,4 @@
-# Update (27-04.2020)
+# Update (27.04.2020, Blanca Fernandez)
 
 Included statistics.ipynb with the different sections of the assingment. Although most of the course is done, the assingments are still missing (preference in having seen all course and leave for the end the assingments, given the limited chances to pass them). Missing assingments to be done during w/c 27.04. 
 
