@@ -1,5 +1,19 @@
-# Projects for prework IH Data Analytics
+# Update (27.04.2020)
 
+Included statistics.ipynb with the different sections of the assingment. Although most of the course is done, the assingments are still missing (preference in having seen all course and leave for the end the assingments, given the limited chances to pass them). Missing assingments to be done during w/c 27.04. 
+
+Python exercises: Majoirity done, still some parts of three of them missing basically due to some difficulties. This will be done as soon as I distangle the bottle neck. 
+
+1. snail-and-well - done
+2. duel - done
+3. bus - done
+4. robin-hood - missing
+5. mission-impossible - missing
+6. temperatures - done (most of it)
+7. lyrics - missing
+8. rock–paper–scissors - missing
+
+# Projects for prework IH Data Analytics
 Within this project there are several folders that have coding problems to solve in Python that will help you to familiarize yourself with the language and its most common functions. Each folder contains a file to open with **jupyter notebook** that will guide you step by step so that you reach the solution.
 
 ## Suggested order according to the difficulty
