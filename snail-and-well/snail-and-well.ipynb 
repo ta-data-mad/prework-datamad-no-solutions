@@ -1,0 +1,287 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<img src=\"https://bit.ly/2VnXWr2\" width=\"100\" align=\"left\">"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# The Snail and the Well\n",
+    "\n",
+    "A snail falls at the bottom of a 125 cm well. Each day the snail rises 30 cm. But at night, while sleeping, slides 20 cm because the walls are wet. How many days does it take for the snail to escape the well?\n",
+    "\n",
+    "**Hint**: The snail gets out of the well when it surpasses the 125cm of height.\n",
+    "\n",
+    "## Tools\n",
+    "\n",
+    "1. Loop: **while**\n",
+    "2. Conditional statements: **if-else**\n",
+    "3. Function: **print()**\n",
+    "\n",
+    "## Tasks\n",
+    "\n",
+    "#### 1. Assign the challenge data to variables with representative names: `well_height`, `daily_distance`, `nightly_distance` and `snail_position`."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 32,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "well_height = 130\n",
+    "daily_distance = 30\n",
+    "nightly_distance = -20\n",
+    "total_distance = 0\n",
+    "distance_per_day = daily_distance + nightly_distance\n",
+    "\n",
+    "snail_in_the_well = True"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### 2. Create a variable `days` to keep count of the days that pass until the snail escapes the well. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 33,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "days = 1\n",
+    "bonus_distance = [30, 21, 33, 77, 44, 45, 23, 45, 12, 34, 55]\n",
+    "bonus_count = 0 "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### 3. Find the solution to the challenge using the variables defined above. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "2\n",
+      "3\n",
+      "4\n",
+      "5\n",
+      "6\n",
+      "7\n",
+      "8\n",
+      "9\n",
+      "10\n",
+      "11\n"
+     ]
+    }
+   ],
+   "source": [
+    "while snail_in_the_well:\n",
+    "    total_distance += daily_distance\n",
+    "    \n",
+    "    print(days) \n",
+    "    if total_distance >= well_height:\n",
+    "        snail_in_the_well = False\n",
+    "        break\n",
+    "    total_distance += nightly_distance    \n",
+    "    days += 1\n",
+    "    \n",
+    "\n",
+    "    if total_distance >= well_height:\n",
+    "        snail_in_the_well = False\n",
+    "     "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### 4. Print the solution."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "He's done it: the worm is out, he took:  12  days\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"He's done it: the worm is out, he took: \", days, \" days\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Bonus\n",
+    "The distance traveled by the snail each day is now defined by a list.\n",
+    "```\n",
+    "advance_cm = [30, 21, 33, 77, 44, 45, 23, 45, 12, 34, 55]\n",
+    "```\n",
+    "On the first day, the snail rises 30cm but during the night it slides 20cm. On the second day, the snail rises 21cm but during the night it slides 20cm, and so on. \n",
+    "\n",
+    "#### 1. How many days does it take for the snail to escape the well?\n",
+    "Follow the same guidelines as in the previous challenge.\n",
+    "\n",
+    "**Hint**: Remember that the snail gets out of the well when it surpasses the 125cm of height."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 34,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "2\n",
+      "3\n",
+      "4\n",
+      "5\n",
+      "6\n"
+     ]
+    }
+   ],
+   "source": [
+    "while snail_in_the_well:\n",
+    "    total_distance += bonus_distance[bonus_count]\n",
+    "    \n",
+    "    print(days)\n",
+    "    \n",
+    "    if total_distance >= well_height:\n",
+    "        snail_in_the_well = False\n",
+    "        break\n",
+    "    \n",
+    "    bonus_count += 1\n",
+    "    total_distance += nightly_distance   \n",
+    "    days += 1\n",
+    "  \n",
+    "\n",
+    "    if total_distance >= well_height:\n",
+    "        snail_in_the_well = False"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### 2. What is its maximum displacement in one day? And its minimum? Calculate the displacement using only the travel distance of the days used to get out of the well. \n",
+    "**Hint**: Remember that displacement means the total distance risen taking into account that the snail slides at night.  "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "max disp.:  57\n",
+      "min disp.:  -8\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"max disp.: \", max(bonus_distance)-20)\n",
+    "print(\"min disp.: \", min(bonus_distance)-20)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### 3. What is its average progress? Take into account the snail slides at night."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "avg disp.:  18.090909090909093\n"
+     ]
+    }
+   ],
+   "source": [
+    "mean_Dist = (\"avg disp.: \", sum(bonus_distance)/len(bonus_distance)-20)\n",
+    "print(mean_Dist)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### 4. What is the standard deviation of its displacement? Take into account the snail slides at night."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import math\n",
+    "sqr_dist = 0\n",
+    "for distance in bonus_distance:\n",
+    "    sqr_dist += (distance - mean_Dist)**2\n",
+    "    \n",
+    "\n",
+    "\n",
+    "stdevDist = math.sqrt(sqr_dist/len(bonus_distance))\n",
+    "print(stdevDist)"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.2"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
