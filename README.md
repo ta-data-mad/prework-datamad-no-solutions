@@ -1,3 +1,19 @@
+# Ejercicios de prework de Ignacio Ordovás Pascual
+
+En las carpetas "snail-and-well, duel, bus, robin-hood, mission-impossible, 
+temperatures, lyrics, rock–paper–scissors" se encuentran los notebooks 
+con los ejercicios resueltos
+
+En la carpeta "2.-Statistics" se encuentran las capturas de pantalla de los test
+del curso de Coursera resueltos, así como un pdf con un mail de coursera confirmado
+que he completado el curso.
+
+Si hay algún problema no dudéis en contactarme por slack o al email:
+ordovaspascual@gmail.com
+
+
+
+
 # Projects for prework IH Data Analytics
 
 Within this project there are several folders that have coding problems to solve in Python that will help you to familiarize yourself with the language and its most common functions. Each folder contains a file to open with **jupyter notebook** that will guide you step by step so that you reach the solution.
