@@ -1,0 +1,297 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Snail and well\n",
+    "\n",
+    "A snail falls at the bottom of a 125 cm well. Each day the snail rises 30 cm. But at night, while sleeping, slides 20 cm because the walls are wet. How many days does it take to escape from the well?\n",
+    "\n",
+    "TIP: http://puzzles.nigelcoldwell.co.uk/sixtytwo.htm"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Solución"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Assign problem data to variables with representative names\n",
+    "# well height, daily advance, night retreat, accumulated distance\n",
+    "well_height = 125\n",
+    "daily_distance = 30\n",
+    "nightly_distance = 20\n",
+    "snail_position = daily_distance\n",
+    "\n",
+    "# Assign 0 to the variable that represents the solution\n",
+    "\n",
+    "day_scape = 1\n",
+    "\n",
+    "# Write the code that solves the problem\n",
+    "\n",
+    "while well_height > snail_position:\n",
+    "    snail_position += daily_distance - nightly_distance\n",
+    "    day_scape = day_scape + 1\n",
+    "\n",
+    "\n",
+    "# Print the result with print('Days =', days)\n",
+    "\n",
+    "print(\"el caracol salio el dia:\",day_scape)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Expected output**: \n",
+    "```\n",
+    "Days = 11\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Goals\n",
+    "\n",
+    "1. Treatment of variables\n",
+    "2. Use of loop **while**\n",
+    "3. Use of conditional **if-else**\n",
+    "4. Print in console"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Bonus\n",
+    "The distance traveled by the snail is now defined by a list.\n",
+    "```\n",
+    "advance_cm = [30, 21, 33, 77, 44, 45, 23, 45, 12, 34, 55]\n",
+    "```\n",
+    "How long does it take to raise the well?\n",
+    "\n",
+    "What is its maximum displacement in one day? And its minimum?\n",
+    "\n",
+    "What is its average speed during the day?\n",
+    "\n",
+    "What is the standard deviation of its displacement during the day?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Assign problem data to variables with representative names\n",
+    "# well height, daily advance, night retreat, accumulated distance\n",
+    "\n",
+    "well_height = 125\n",
+    "daily_distance = [30, 21, 33, 77, 44, 45, 23, 45, 12, 34, 55]\n",
+    "nightly_distance = 20\n",
+    "snail_position = daily_distance[0]\n",
+    "\n",
+    "\n",
+    "# Assign 0 to the variable that represents the solution\n",
+    "\n",
+    "day_scape = 1 \n",
+    "\n",
+    "# Write the code that solves the problem\n",
+    "\n",
+    "i=1\n",
+    "while well_height >= snail_position:\n",
+    "    snail_position += daily_distance[i] - nightly_distance\n",
+    "    day_scape = day_scape + 1\n",
+    "    i+=1\n",
+    "\n",
+    "\n",
+    "# Print the result with print('Days =', days)\n",
+    "\n",
+    "print(\"el caracol salio el dia:\",day_scape)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Expected output**: \n",
+    "```\n",
+    "Days = 6\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "sin tomar en cuenta que el caracol en la noche se desplaza hacia abajo\n",
+      "el desplazamiento minimo fue de  12\n",
+      "el desplazamiento maximo fue de  77\n",
+      " \n",
+      "tomando en cuenta que el caracol en la noche se desplaza hacia abajo\n",
+      "el desplazamiento minimo fue de  1\n",
+      "el desplazamiento maximo fue de  57\n"
+     ]
+    }
+   ],
+   "source": [
+    "# What is its maximum displacement in a day? And its minimum?\n",
+    "\n",
+    "print(\"sin tomar en cuenta que el caracol en la noche se desplaza hacia abajo\")\n",
+    "\n",
+    "print(\"el desplazamiento minimo fue de \",min(daily_distance))\n",
+    "print(\"el desplazamiento maximo fue de \",max(daily_distance))\n",
+    "\n",
+    "print(\" \")\n",
+    "\n",
+    "#si tomamos en cuneta que el caracol se desliza en la noche el desplazamiento total en el dia seria el siguiente\n",
+    "\n",
+    "displacement_day=[]\n",
+    "for z in range(0,i):\n",
+    "    displacement_day.append(daily_distance[z]-20)\n",
+    "print(\"tomando en cuenta que el caracol en la noche se desplaza hacia abajo\")\n",
+    "print(\"el desplazamiento minimo fue de \",min(displacement_day))\n",
+    "print(\"el desplazamiento maximo fue de \",max(displacement_day))\n",
+    "\n",
+    "#en mi opinion considero que deberia ser la segunda opcion ya que se desea saber el desplazamiento en un dia, y durante ese dia el caracol sube y luego baja, por lo que el desplazamiento total seria la resta de esas dos distacias.\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Expected output**: \n",
+    "```\n",
+    "77 12\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "sin tomar en cuenta que el caracol en la noche se desplaza hacia abajo\n",
+      "el promedio del desplazamiento del caracol es de  38.09090909090909\n",
+      " \n",
+      "tomando en cuenta que el caracol en la noche se desplaza hacia abajo\n",
+      "el promedio del desplazamiento del caracol es de  21.666666666666668\n"
+     ]
+    }
+   ],
+   "source": [
+    "# What is its average progress?\n",
+    "\n",
+    "x=(sum(daily_distance)/len(daily_distance))\n",
+    "print(\"sin tomar en cuenta que el caracol en la noche se desplaza hacia abajo\")\n",
+    "print(\"el promedio del desplazamiento del caracol es de \",x)\n",
+    "\n",
+    "print(\" \")\n",
+    "t=(sum(displacement_day)/len(displacement_day))\n",
+    "print(\"tomando en cuenta que el caracol en la noche se desplaza hacia abajo\")\n",
+    "print(\"el promedio del desplazamiento del caracol es de \",t)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Expected output**: \n",
+    "```\n",
+    "38.09090909090909\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "sin tomar en cuenta que el caracol en la noche se desplaza hacia abajo\n",
+      "la desviacion estandar es  13.416575863043647\n",
+      " \n",
+      "tomando en cuenta que el caracol en la noche se desplaza hacia abajo\n",
+      "la desviacion estandar es  17.81073334319006\n"
+     ]
+    }
+   ],
+   "source": [
+    "# What is the standard deviation of your displacement during the day?\n",
+    "\n",
+    "print(\"sin tomar en cuenta que el caracol en la noche se desplaza hacia abajo\")\n",
+    "import math\n",
+    "y=0\n",
+    "for p in range (0,z+1):\n",
+    "    y+=(daily_distance[p]-x)**2\n",
+    "y=y/len(daily_distance)\n",
+    "print(\"la desviacion estandar es \",math.sqrt(y))\n",
+    "\n",
+    "\n",
+    "\n",
+    "print(\" \")\n",
+    "\n",
+    "print(\"tomando en cuenta que el caracol en la noche se desplaza hacia abajo\")\n",
+    "y=0\n",
+    "for p in range (0,z+1):\n",
+    "    y+=(displacement_day[p]-t)**2\n",
+    "y=y/len(displacement_day)\n",
+    "print(\"la desviacion estandar es \",math.sqrt(y))\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Expected output**: \n",
+    "```\n",
+    "17.159437082600803\n",
+    "```"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
