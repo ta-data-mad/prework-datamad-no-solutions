@@ -1,39 +1,39 @@
-# Projects for prework IH Data Analytics
+<img src="https://bit.ly/2VnXWr2" width="100">
 
-Within this project there are several folders that have coding problems to solve in Python that will help you to familiarize yourself with the language and its most common functions. Each folder contains a file to open with **jupyter notebook** that will guide you step by step so that you reach the solution.
+# Prework
+*Ironhack Data Analytics Bootcamp*
 
-## Suggested order according to the difficulty
+## Introduction
+This repository contains the prework for the Ironhack Data Analytics Bootcamp. 
 
-1. snail-and-well
-2. duel
-3. bus
-4. robin-hood
-5. mission-impossible
-6. temperatures
-7. lyrics
-8. rock–paper–scissors
+**If you are an enrolled student in our upcoming bootcamp**, you can receive support from our instructional staff while you are working on these challenges. Your Program Manager will send you information about how to reach out to our instructional support team.
 
+**If you are not an enrolled student but find our repository in GitHub**, feel free to use it for personal, non-commcercial purposes. The codes are provided AS IS without support.
 
-## Tips
+## Getting Started
 
-Clone this repository or work localy downloading the files. It is up to you.
+Before starting with the challenges, read the Prework lessons in LMS (Ironhack's student platform) and make sure you've installed all the required software. To complete the Prework exercises, you will mainly need Python 3 and Jupyter Notebook. 
 
-## Q/A example
+To get started, fork this repository and clone it to your local file system. Navigate to the repository directory using the command line and then, start Jupyter Notebook.
 
-### Question
+In the repository, you will find two directories: Python and Statistics. 
 
-Question: How old are you if you were born in 1990?
+#### Python
+To complete the Python exercises, navigate to the Python directory. This directory includes a bunch of folders, each with a problem for you to solve. Refer to the `README.md` file for further instructions.
 
-### Answer
-```
-current = 2019
-born = 1990
-age = current - born
-print ('Age =', age)
-```
-### Output
-```
->>> Age = 29
-```
+#### Statistics
+To complete the statistics exercises, navigate to the Statistics directory, where you will find instructions about how to complete the statistics challenges in the `README.md` file found there.
 
-Do as much as you can and good luck. In some cases the use of functions is recommended. 
+## Deliverables
+The files you need to submit are:
+- The `.ipynb` files of each Python challenge including the solutions.
+- Screenshots of all the challenges in the `Data Science Math Skills` course in Coursera. 
+
+## Submitting Your Work
+
+If you are an enrolled student, **you are required to submit your solutions before your course starts**. 
+
+## Summary
+Read the instructions of the prework challenges carefully. Remember that if you have any doubt, you can reach out to Ironhack's instructional support team.  
+
+Try your best and good luck!
